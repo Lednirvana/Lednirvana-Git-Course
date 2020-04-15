@@ -1,0 +1,26 @@
+git checkout <BRANCH>
+git log
+
+//REVERTER COMMIT (Mais seguro utilizar quando se tratar da 'master')
+git revert <HASH CODE> -->  ':wq' to confirm
+
+//REVERTER COMMIT (Bom para branches separadas)
+git reset --hard <HASH CODE> --> remove as mudanças anteriores e o commit feito
+
+git reset --soft <HASH CODE> --> remove somente commit e volta os arquivos com as mudanças
+
+//FORÇAR UM PUSH CASO O HISTÓRICO REMOTO SEJA DIREFENTE DO LOCAL
+git push origin master --force
+
+//EDITAR UM COMMIT (preferencialmente usar antes de dar push)
+git commit --amend --> apertar 'i' para edição, após editar ':wq'
+
+//PEGAR UM COMMIT DE UMA OUTRA BRANCH
+git cherry-pick <HASH CODE>
+
+//COMITAR PARTES DE UM CODIGO
+git add -p --> y,n
+
+//JUNTAR COMMITS EM UM SÓ
+git rebase -i HEAD~2 --> aqui seriam agrupados os dois primeiros commits
+usar 'squash' para juntar
