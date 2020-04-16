@@ -21,6 +21,12 @@ git cherry-pick <HASH CODE>
 //COMITAR PARTES DE UM CODIGO
 git add -p --> y,n
 
-//JUNTAR COMMITS EM UM SÓ
+//JUNTAR COMMITS EM UM SÓ (REBASE INTERATIVO)
 git rebase -i HEAD~2 --> aqui seriam agrupados os dois primeiros commits
 usar 'squash' para juntar
+
+//CORRIGIR COMMIT ANTERIOR COM FIXUP
+git commit --fixup <HASH CODE COMMIT>
+
+//AUTOSQUASH (JUNTAR FIXUP )
+git rebase -i --autosquash <HASH CODE> --> ':wq'
