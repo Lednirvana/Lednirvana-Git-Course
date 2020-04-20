@@ -30,3 +30,49 @@ git commit --fixup <HASH CODE COMMIT>
 
 //AUTOSQUASH (JUNTAR FIXUP )
 git rebase -i --autosquash <HASH CODE> --> ':wq'
+
+//RESOLVER CONFLITOS DE HISTORICO/COMMIT
+git pull origin <BRANCH> --rebase
+
+//RESOLVER CONFLITOS ENTRE LOCAL E REMOTO (ALTERAÇÃO DA MESMA LINHA DE CODIGO NOS DOIS LOCAIS)
+ dar pull no repoditorio remoto para p local, resolver os conflitos e depois
+ git merge --continue --> ':wq'
+
+ //AUTO CORREÇÃO GIT
+ git config --global help.autocorrect 1
+
+ //"ZIPAR" REPOSITORIO LOCAL
+ git arquive <BRANCH> --format=zip --output=<NOME DO ARQUIVO>
+
+ //LOG ORGANIZADO DE OUTRA FORMA
+ git log --pretty=oneline
+ 
+ //LOG ORGANIZADO DE OUTRA FORMA(COM GRAFICO)
+ git log --pretty=oneline --graph
+ 
+ //LOG ORGANIZADO DE OUTRA FORMA(ALL)
+ git log --pretty=oneline --graph --all
+
+ //FILTRO DE LOG POR DATA (DESDE...)
+ git log --since='Jan 1 2020'
+
+ //FILTRO DE LOG POR DATA (ATÉ...)
+ git log --until='Jan 1 2020'
+
+ //FILTRO DE LOG POR DATA (ENTRE DUAS DATAS)
+ git log --since='Jan 1 2020' --until='Jan 12 2020'
+
+//FILTRO DE LOG POR AUTOR
+git log --author='matheus'
+
+//LOG CURTO
+git shortlog
+
+//LOG CURTO(SÓ QUANTIDADE DE COMMITS)
+git shortlog -sn
+
+//LOG CURTO(QUANTIDADE EXATA DE COMMITS)
+git log -3
+
+//EXIBIR O LOG DETALHADO
+git reflog
